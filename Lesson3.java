@@ -1,5 +1,3 @@
-package lesson3;
-
 import java.util.Arrays;
 
 public class Lesson3 {
@@ -40,7 +38,7 @@ public class Lesson3 {
         int[] data = new int[100];
         System.out.println("Task2 result:");
         for(int i=0; i<data.length;i++){
-             data[i] = i +1 ;
+            data[i] = i +1 ;
 
         }
         System.out.println(Arrays.toString(data));
@@ -126,31 +124,31 @@ public class Lesson3 {
     }
 
     private static void Task8(int[] data, int n) {
-           System.out.println("Task8*** result:");
-           System.out.println("Первоначальный массив:");
-           System.out.println(Arrays.toString(data));
-           System.out.println("Число для сдвига:" + n);
-            boolean FlgDir = n < 0;
-            n = (n < 0) ? -n : n;
-            n %= data.length;
-            int LastVal = data.length - 1;
-            for (int i = 0; i < n; i++) {
-                int A = (FlgDir) ? data[0] : data[LastVal];
+        System.out.println("Task8*** result:");
+        System.out.println("Первоначальный массив:");
+        System.out.println(Arrays.toString(data));
+        System.out.println("Число для сдвига:" + n);
+        boolean FlgDir = n < 0;
+        n = (n < 0) ? -n : n;
+        n %= data.length;
+        int LastVal = data.length - 1;
+        for (int i = 0; i < n; i++) {
+            int A = (FlgDir) ? data[0] : data[LastVal];
 
-                for (int j = 0; j < LastVal; j++) {
-                    if (FlgDir)
-                        data[j] = data[j + 1];
-                    else
-                        data[LastVal - j] = data[LastVal - j - 1];
-                }
-
+            for (int j = 0; j < LastVal; j++) {
                 if (FlgDir)
-                    data[LastVal] = A;
+                    data[j] = data[j + 1];
                 else
-                    data[0] = A;
+                    data[LastVal - j] = data[LastVal - j - 1];
             }
-            System.out.println("Измененный массив:");
-            System.out.println(Arrays.toString(data));
+
+            if (FlgDir)
+                data[LastVal] = A;
+            else
+                data[0] = A;
+        }
+        System.out.println("Измененный массив:");
+        System.out.println(Arrays.toString(data));
 
 
 
