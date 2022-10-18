@@ -8,13 +8,13 @@ public class Employee {
     private int salary;
     private int age;
 
-    public Employee(String _fio, String _position, String _email, String _phoneNum, int _salary, int _age) {
-        fio = _fio;
-        position = _position;
-        email = _email;
-        phoneNum = _phoneNum;
-        salary = _salary;
-        age = _age;
+    public Employee(String fio, String position, String email, String phoneNum, int salary, int age) {
+        this.fio = fio;
+        this.position = position;
+        this.email = email;
+        this.phoneNum = phoneNum;
+        this.salary = salary;
+        this.age = age;
     }
 
     public void info() {

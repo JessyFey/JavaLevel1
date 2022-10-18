@@ -13,9 +13,14 @@ public class Lesson5 {
         persArray[3] = new Employee("Тюрин О.Н.", "Старший аналитик", "tyrin@mailbox.com", "89231231245", 35000, 40);
         persArray[4] = new Employee("Артамонов К.Г.", "Старший инженер", "artamonov@mailbox.com", "89125769800", 38000, 43);
 
-        for (int i = 0; i < persArray.length; i++) {
-            if (persArray[i].getAge() >= 40) {
-                persArray[i].info();
+//        for (int i = 0; i < persArray.length; i++) {
+//            if (persArray[i].getAge() >= 40) {
+//                persArray[i].info();
+//            }
+//        }
+        for (Employee employee : persArray) {
+            if (employee.getAge() >= 40) {
+                employee.info();
             }
         }
     }
